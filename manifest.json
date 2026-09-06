@@ -1,0 +1,11 @@
+{
+  "name": "SPE Basrah Admin",
+  "short_name": "SPE Admin",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#F5F8FC",
+  "theme_color": "#0759B8",
+  "description": "SPE Basrah administration platform",
+  "orientation": "portrait-primary",
+  "prefer_related_applications": false
+}
