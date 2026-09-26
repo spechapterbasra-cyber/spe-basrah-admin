@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="/spe-basrah-admin/">
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="SPE Basrah Administration Platform">
+  <meta name="theme-color" content="#0759B8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SPE Basrah Admin</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <!-- Load the newest build: read version.txt past the browser cache, then
+       load flutter_bootstrap.js (and main.dart.js) under that version. -->
+  <script>
+    (function () {
+      function start(version) {
+        window.speBuildVersion = version;
+        var script = document.createElement('script');
+        script.src = 'flutter_bootstrap.js' + (version ? '?v=' + encodeURIComponent(version) : '');
+        script.async = true;
+        document.body.appendChild(script);
+      }
+      fetch('version.txt', { cache: 'no-store' })
+        .then(function (response) { return response.ok ? response.text() : ''; })
+        .then(function (text) { start(text.trim()); }, function () { start(''); });
+    })();
+  </script>
+</body>
+</html>
